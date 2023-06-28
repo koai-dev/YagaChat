@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="avatar"
+            type="String" />
+
+        <variable
+            name="hasActive"
+            type="Boolean" />
+
+        <variable
+            name="name"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color">
+
+        <TextView
+            android:id="@+id/point_top"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            thumb_shape="@{avatar}"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_default"
+            android:translationZ="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/point_top"
+            app:shapeAppearanceOverlay="@style/Circle"
+            app:strokeColor="@color/color_on_primary_9"
+            app:strokeWidth="0.3dp" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/TextBold16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:maxLength="25"
+            android:text='@{name, default="Maciej Kowalski"}'
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_name"
+            app:layout_constraintTop_toTopOf="@+id/shapeableImageView"
+            app:menu="@menu/main_menu" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+            app:tabIndicatorColor="@color/color_on_primary"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="fixed"
+            app:tabIconTint="@color/tab_state_color"
+            app:tabSelectedTextColor="@color/color_on_primary"
+            app:tabTextColor="@color/color_on_primary_50" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="avatar"
+            type="String" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="time"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView2"
+            thumb_shape="@{image}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@color/color_on_second_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundTopRightAndBottomLeft20dp"
+            app:strokeColor="@color/primary_color"
+            app:strokeWidth="0.3dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            thumb_shape="@{avatar}"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circle"
+            app:strokeColor="@color/color_on_second_9"
+            app:strokeWidth="0.3dp" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:text="@{name, default=NguyenKimKhanh}"
+            android:textColor="@color/color_on_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:text='@{name, default="5 minutes ago"}'
+            android:textColor="@color/color_on_primary_50"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_name"
+            app:layout_constraintStart_toEndOf="@+id/txt_name" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="-12dp"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            app:tint="@color/color_on_primary"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/edt_send_message"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_margin="20dp"
+            android:paddingHorizontal="16dp"
+            android:maxLength="300"
+            android:maxLines="6"
+            android:autofillHints="Send your message"
+            android:background="@drawable/bg_edt_send_message_gradient"
+            android:hint="@string/send_your_message"
+            android:inputType="text"
+            android:textColor="@color/color_on_primary"
+            android:textColorHint="@color/color_on_primary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/shapeableImageView2"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_send_message"
+            app:layout_constraintEnd_toStartOf="@+id/btn_send_message"
+            app:layout_constraintTop_toTopOf="@+id/edt_send_message"
+            app:tint="@color/color_on_primary"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/btn_send_message"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_send_message"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_send_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edt_send_message"
+            app:tint="@color/color_on_primary"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

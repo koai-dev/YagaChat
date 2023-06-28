@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "472580249345",
+    "project_id": "yaga-66913",
+    "storage_bucket": "yaga-66913.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472580249345:android:09f864bdde6a8f1ea82d00",
+        "android_client_info": {
+          "package_name": "com.rbservice.yaga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472580249345-vk9d289ub04594auijlvhlqnbmenbah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8glZhFbLIQiL4yqaqL1bn1BKHuQ4_ScE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472580249345-vk9d289ub04594auijlvhlqnbmenbah3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

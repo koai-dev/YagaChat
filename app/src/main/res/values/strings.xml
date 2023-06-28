@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Yaga Chat</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="retry">Retry</string>
+    <string name="lost_internet_connection">Lost internet connection</string>
+    <string name="you_are_offline_please_check_the_connection_again">You are offline. Please check the connection again.</string>
+    <string name="chat">Chat</string>
+    <string name="status">Status</string>
+    <string name="call">Call</string>
+    <string name="group">Group</string>
+    <string name="wellcome_to">Wellcome to</string>
+    <string name="read_our_privacy_policy_tap_agree_and_continue_to_accept_the_terms_of_service">Read our <font color='#1C83E2'>Privacy Policy.</font> Tap “Agree and continue” to accept the <font color='#1C83E2'>Terms of Service</font></string>
+    <string name="english">English</string>
+    <string name="agree_and_continue">Agree and continue</string>
+    <string name="app_language">App language</string>
+    <string name="sw">Sw</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="send_your_message">Send your message</string>
+    <string name="settings">Settings</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="yaga_will_need_to_verify_your_account_what_your_number">YAGA will need to verify your account. <font color='#1C83E2'>What your number?</font></string>
+    <string name="choose_a_country">Choose a country</string>
+    <string name="phone_number">phone number</string>
+    <string name="note_carrier_charges_may_apply">Note: Carrier charges may apply</string>
+    <string name="next">Next</string>
+    <string name="help">Help</string>
+</resources>

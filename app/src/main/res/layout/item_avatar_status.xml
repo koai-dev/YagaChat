@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hasStatus"
+            type="Boolean" />
+
+        <variable
+            name="hasOwner"
+            type="Boolean" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="avatar"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
+
+        <ImageView
+            android:id="@+id/container_status"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_has_status"
+            android:visibility="@{hasStatus?View.VISIBLE:View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            thumb_shape="@{avatar}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_default"
+            app:layout_constraintBottom_toBottomOf="@+id/container_status"
+            app:layout_constraintEnd_toEndOf="@+id/container_status"
+            app:layout_constraintStart_toStartOf="@+id/container_status"
+            app:layout_constraintTop_toTopOf="@+id/container_status"
+            app:shapeAppearanceOverlay="@style/Circle" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="-6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_status"
+            android:visibility="@{hasOwner?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/container_status"
+            app:layout_constraintEnd_toEndOf="@+id/container_status" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text='@{name, default="Nguyen Kim Khanh"}'
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
