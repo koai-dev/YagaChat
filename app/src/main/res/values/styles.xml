@@ -41,4 +41,9 @@
     <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/enter_from_top</item>
+        <item name="android:windowExitAnimation">@anim/exit_to_bottom</item>
+    </style>
 </resources>
